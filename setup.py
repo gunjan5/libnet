@@ -50,7 +50,6 @@ setuptools.setup(
     keywords='calico docker etcd mesos kubernetes rkt openstack',
 
     packages=setuptools.find_packages(exclude=['ez_setup', 'examples', 'tests']),
-    include_package_data=True,
     
     install_requires=['netaddr', 'python-etcd>=0.4.3', 'subprocess32', 'flask', 'gunicorn', 'gevent'],
     dependency_links=[
