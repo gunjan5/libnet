@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright (c) 2014-2016 Tigera, Inc. All rights reserved.
+# Copyright (c) 2016 Tigera, Inc. All rights reserved.
 #
 # All Rights Reserved.
 #
@@ -17,7 +17,7 @@
 
 import setuptools
 
-version = '0.9.0'
+version = '0.9.0-dev'
 
 setuptools.setup(
     name='libnetwork',
@@ -49,17 +49,11 @@ setuptools.setup(
      # What does your project relate to?
     keywords='calico docker etcd mesos kubernetes rkt openstack',
 
-    packages=setuptools.find_packages(exclude=['ez_setup', 'examples', 'tests']),
+    packages=["libnetwork"],
     
     install_requires=['netaddr', 'python-etcd>=0.4.3', 'subprocess32', 'flask', 'gunicorn', 'gevent'],
     dependency_links=[
     "git+https://github.com/projectcalico/python-etcd.git",
     "git+https://github.com/projectcalico/libcalico.git"
     ]
-
-    #   entry_points="""
-    #   # -*- Entry points: -*-
-    #   """,
-
-
 )
